@@ -16,7 +16,7 @@ public class Caminhao extends Veiculo {
         return eixos;
     }
 
-    public void setEixos(int eixos) {
+    protected void setEixos(int eixos) {
         if (eixos < 2) {
             throw new IllegalArgumentException("Um caminhao deve ter ao menos 2 eixos.");
         }

@@ -1,7 +1,7 @@
 # Check Point 2 - Refatoração FiapDelivery
 
 Atividade de Object-Oriented Programming (FIAP), prof. Ygor Anjos.
-Aluno: Roberto Flaquer
+Aluno: Roberto Flaquer (RM 567348)
 
 Refatoração do código legado do FiapDelivery aplicando encapsulamento, herança, associação, construtores, documentação e Clean Code.
 
@@ -10,7 +10,7 @@ Refatoração do código legado do FiapDelivery aplicando encapsulamento, heran�
 | Problema do código legado | Solução |
 |---|---|
 | Nomes sem sentido (`pl`, `cap`, `p`, `s`, `muda`, `vai`) | Nomes claros (`placa`, `capacidadeKg`, `pesoKg`, `status`, `atualizarStatus`, `iniciarEntrega`) e classes em PascalCase |
-| Atributos `public` | Atributos `private`, com getters e setters que validam os dados (por exemplo, capacidade negativa lança `IllegalArgumentException`) |
+| Atributos `public` | Atributos `private`, com getters e setters `protected` que validam os dados (por exemplo, capacidade negativa lança `IllegalArgumentException`) |
 | Código duplicado em `caminhao` e `moto` | Classe abstrata `Veiculo` com os atributos comuns; `Caminhao` e `Moto` herdam dela |
 | `Rota` só aceitava `Caminhao` | `Rota` se associa a `Veiculo` (abstração), então aceita `Caminhao`, `Moto` ou qualquer veículo futuro |
 | Status do pacote como `String` livre | Enum `StatusPacote` (`PENDENTE`, `EM_TRANSITO`, `ENTREGUE`) |

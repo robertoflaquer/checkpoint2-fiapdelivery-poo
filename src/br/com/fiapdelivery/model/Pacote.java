@@ -30,7 +30,7 @@ public class Pacote {
         return pesoKg;
     }
 
-    public void setPesoKg(double pesoKg) {
+    protected void setPesoKg(double pesoKg) {
         if (pesoKg <= 0) {
             throw new IllegalArgumentException("O peso deve ser maior que zero.");
         }

@@ -30,7 +30,7 @@ public abstract class Veiculo {
         return capacidadeKg;
     }
 
-    public void setCapacidadeKg(double capacidadeKg) {
+    protected void setCapacidadeKg(double capacidadeKg) {
         if (capacidadeKg <= 0) {
             throw new IllegalArgumentException("A capacidade deve ser maior que zero.");
         }
